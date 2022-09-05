@@ -23,28 +23,29 @@
 
 ########################################################################
 
-HTMLS 			=	index.html \
-				status.html \
-				news-2022.html \
-				news-2021.html \
-				news-2020.html \
-				news-2019.html \
-				news-2018.html \
-				contact.html \
-				search.html \
-				participants.html \
-				publications.html \
-				telescope.html \
-				interim-instrument.html \
-				gallery.html \
-				acknowledgements.html \
-				shared-risk-observations.html
+HTMLS = \
+  index.html \
+  status.html \
+  news-2022.html \
+  news-2021.html \
+  news-2020.html \
+  news-2019.html \
+  news-2018.html \
+  contact.html \
+  search.html \
+  participants.html \
+  publications.html \
+  telescope.html \
+  interim-instrument.html \
+  gallery.html \
+  acknowledgements.html \
+  shared-risk-observations.html
 
-EXTRA_HTML_DEPENDENCIES	=	HEADER.md FOOTER.md *.meta
+EXTRA_HTML_DEPENDENCIES = HEADER.md FOOTER.md *.meta
 
-all			: 	$(HTMLS)
+all : $(HTMLS)
 
-install			:	all
+install-remote : all
 	rsync -v --chmod=u=rwX,go=rX \
 	  coatli.conf transientscu-services:/etc/apache2/sites-enabled/
 	rsync -ahv --chmod=u=rwX,go=rX --delete \
@@ -59,6 +60,22 @@ install			:	all
 	  --include=*.mp4 \
 	  --exclude=* \
 	  . transientscu-services:/usr/local/var/www/coatli/html
+
+install-local : all
+	rsync -v --chmod=u=rwX,go=rX \
+	  coatli.conf /etc/apache2/sites-enabled/
+	rsync -ahv --chmod=u=rwX,go=rX --delete \
+	  --exclude=.git/ \
+	  --include=./ \
+	  --include=*/ \
+	  --include=*.html \
+	  --include=*.pdf \
+	  --include=*.jpg \
+	  --include=*.png \
+	  --include=*.css \
+	  --include=*.mp4 \
+	  --exclude=* \
+	  . /usr/local/var/www/coatli/html
 
 ########################################################################
 
