@@ -8,8 +8,11 @@
 
 * [GCN Circulars](https://gcn.gsfc.nasa.gov/gcn3_circulars.html)
  
-  * [All](http://bit.ly/2mhujY1) (22 circulars to date)
-  * [2019](http://bit.ly/2lOrIEw) (9 circulars but incomplete)
+  * [All](http://bit.ly/2mhujY1) (33 circulars to date)
+  * [2022](https://bit.ly/3x0RE1A) (2 circulars to date)
+  * 2021 (0 circulars -- telescope closed almost all year)
+  * 2020 (0 circulars -- telescope closed almost all year)
+  * [2019](http://bit.ly/2lOrIEw) (16 circulars)
   * [2018](http://bit.ly/2maMHkZ) (11 circulars)
   * [2017](http://bit.ly/2m8wVqO) (2 circulars)
   
