@@ -4,7 +4,7 @@
 
 The COATLI telescope is an [ASTELCO Systems](http://www.astelco.com)
 50-cm f/8
-[Ritchey-Crétien](https://en.wikipedia.org/wiki/Ritchey–
+[Ritchey-Chrétien](https://en.wikipedia.org/wiki/Ritchey–
 Chrétien_telescope) reflector with protected aluminum coatings.
 
 ## Location
