@@ -52,6 +52,7 @@ install-local:
 	RSYNC_PREFIX="" make install-with-prefix
 
 install-with-prefix: all
+	ssh cu-public mkdir -p /usr/local/var/www/coatli/
 	rsync -v --chmod=u=rwX,go=rX \
 	  coatli.conf $$RSYNC_PREFIX/usr/local/var/www/coatli/
 	rsync -ahv --chmod=u=rwX,go=rX --delete \
