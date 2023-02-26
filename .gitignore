@@ -2,3 +2,4 @@
 *.html
 Makefile.dependencies
 .DS_Store
+*.worksheet
